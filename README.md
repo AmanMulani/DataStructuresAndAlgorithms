@@ -1,2 +1,2 @@
 # pythonDataStructures
-This repository is solely made to apply different optimizations on the well know problem statements such as Fibonacci Series. 
+Various data structure and algorithms problems are updated in this repository.
