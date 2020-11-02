@@ -3,6 +3,7 @@ The sieve of Eratosthenes is preprocessing algorithm that builds an array using 
 2....n is prime and, if it is not, find one prime factor of the number.
 If the last element of the array(sieve) is zero, then the given number is a prime number.
 If the last element of the array(sieve) is not zero then the given number is not a prime number. Then the last element is one of the prime factors of the given number.
+The run time is equal to O(nlogn)
 '''
 
 def sieve_of_eratosthenes(n):
