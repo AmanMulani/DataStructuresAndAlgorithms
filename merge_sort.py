@@ -54,9 +54,43 @@ def merge(A, start_index, mid_index, end_index):
         j+=1
         k+=1
 
-    print("="*35)
+    # print("="*35)
 
+
+#A more pythonic way of merge sort. (Time complexity is the same)
+def merge_sort_1(A):
+    n = len(A)
+    if n == 1:
+        return A
+    mid = n//2
+    L = merge_sort_1(A[ : mid])
+    R = merge_sort_1(A[mid : ])
+    return merge1(L, R)
+
+def merge1(L, R):
+    i = 0
+    j = 0
+    answer = []
+    while i<len(L) and j<len(R):
+        if L[i] <= R[j]:
+            answer.append(L[i])
+            i+=1
+        else:
+            answer.append(R[j])
+            j+=1
+    
+    if i<len(L):
+        answer.extend(L[i : ])
+    if j<len(R):
+        answer.extend(R[j : ]) 
+    return answer
 
 input_array = [20, 19, 18, 17, 205, 16, 15, 14, 13, 12, 366, 11, 10, 21, 25, 27, 29, 28, 9, 8, 6, 5, 4, 7, 3, 2, 1, 0]
+input_array1 = [20, 19, 18, 17, 205, 16, 15, 14, 13, 12, 366, 11, 10, 21, 25, 27, 29, 28, 9, 8, 6, 5, 4, 7, 3, 2, 1, 0]
+print('Using merge_sort')
 merge_sort(input_array, 0, len(input_array)-1)
 print(input_array)
+
+print('Using merge_sort1')
+print(merge_sort_1(input_array))
+# print(input_array)
