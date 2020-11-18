@@ -1,3 +1,8 @@
+'''
+Merge Sort
+Time Complexity: O(nlogn)
+'''
+
 def merge_sort(A, start_index, end_index):
     if(start_index < end_index):
         mid_index = (start_index + end_index) // 2
@@ -7,11 +12,11 @@ def merge_sort(A, start_index, end_index):
 
 def merge(A, start_index, mid_index, end_index):
 
-    print('INSIDE MERGE METHOD')
-    print('Array:', A)
-    print('Start Index:', start_index)
-    print('Mid Index:', mid_index)
-    print('End Index:', end_index)
+    # print('INSIDE MERGE METHOD')
+    # print('Array:', A)
+    # print('Start Index:', start_index)
+    # print('Mid Index:', mid_index)
+    # print('End Index:', end_index)
     
 
     n1 = mid_index - start_index + 1
@@ -25,8 +30,8 @@ def merge(A, start_index, mid_index, end_index):
     for j in range(n2):
         R[j] = A[mid_index + 1 + j]
 
-    print(L)
-    print(R)
+    # print(L)
+    # print(R)
     i = 0 
     j = 0
     k = start_index
@@ -53,7 +58,5 @@ def merge(A, start_index, mid_index, end_index):
 
 
 input_array = [20, 19, 18, 17, 205, 16, 15, 14, 13, 12, 366, 11, 10, 21, 25, 27, 29, 28, 9, 8, 6, 5, 4, 7, 3, 2, 1, 0]
-print(len(input_array))
 merge_sort(input_array, 0, len(input_array)-1)
-print(len(input_array))
 print(input_array)
